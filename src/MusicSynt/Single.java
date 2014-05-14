@@ -1,11 +1,10 @@
+/**
+ * Created by Neveral on 05.04.14.
+ */
 package MusicSynt;
 
 import java.util.*;
 
-
-/**
- * Created by Neveral on 05.04.14.
- */
 public class Single {
     private int sampleRate;
     private ArrayList<Part> parts = new ArrayList<Part>();
@@ -28,8 +27,6 @@ public class Single {
         notes.put("A", 0);
         notes.put("A#", 1);
         notes.put("B", 2);
-        notes.put("L", 3);
-        notes.put("S", 4);
     }
 
     public void music (String sound) {
@@ -63,7 +60,7 @@ public class Single {
     public int[] synt() {
         data = new int[length];
         for (Part part : parts) {
-            part.get(data, sampleRate);
+            part.get(data);
         }
         return data;
     }
