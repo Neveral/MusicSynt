@@ -73,7 +73,6 @@ public class Part {
         k1 = 1 - kDemp * 0.5f;
         k2 = kDemp * 0.25f;
 
-        // where is the sound pick ?
         NK = ((float)stLen * 0.1f) * (1.0f - kHard) + 1.0f;
         NN = (int)(NK);
         NK = NK - NN;
@@ -89,8 +88,6 @@ public class Part {
             float m = 1.0f + kRand * (frand() - 0.5f);
             FdM[i] = Frc / m;
         }
-
-        // velocities
         for(i = 1 ; i < stLen / 4 ; i++)
         {
             V[i] = 1;
