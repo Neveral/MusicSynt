@@ -11,7 +11,7 @@ public class CreateWave {
         int sampleRate = 44100;
         Single test = new Single(sampleRate);
         test.fillMap();
-        test.music("A3 A3 B3 B3 C3 A3 B3 C3 G3");
+        test.music("A5 A4 A5 A4 A5");
         System.out.println("Create file...");
         int[] samples;
         samples = test.synt();
